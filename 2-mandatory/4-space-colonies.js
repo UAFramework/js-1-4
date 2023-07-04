@@ -15,7 +15,9 @@
   
 */
 
-function getSettlers() {}
+function getSettlers(famalies) {
+  return famalies.filter(el => /^A.+?family$/.test(el));
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
