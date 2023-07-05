@@ -12,9 +12,17 @@
 
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
-
-let result = story.replace("", "");
-
+let replaceItems = {
+  "dogs" : "cats",
+  "day" : "night",
+  "10" : "100000",
+  "great" : "brilliant"
+}
+let result = story.replaceAll("dogs", "cats").replaceAll("day", "night").replace("10", "100000").replace("great", "brilliant");
+/*let result = story;
+Object.keys(replaceItems).forEach(key => {
+  result = result.replace(new RegExp(key, "g"), replaceItems[key]);
+});*/
 /* EXPECTED OUTPUT */
 
 const util = require("util");
