@@ -15,7 +15,15 @@
   
 */
 
-function getSettlers() {}
+function getSettlers(settlersArray) {
+  let stayingSettlers = [];
+  for (let family of settlersArray) {
+    if (family.startsWith("A") && family.includes("family")) {
+      stayingSettlers.push(family);
+    }
+  }
+  return stayingSettlers;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
