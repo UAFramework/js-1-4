@@ -22,7 +22,8 @@
 */
 
 function isBushSafe(berryArray) {
-  //Write your code here
+  return berryArray.every(berry => berry === "pink") ? "Bush is safe to eat from" : "Toxic! Leave bush alone!";
+  //return berryArray.some(berry => berry !== "pink") ? "Toxic! Leave bush alone!" : "Bush is safe to eat from";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
