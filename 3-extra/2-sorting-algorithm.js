@@ -21,7 +21,17 @@ function sortAges(arr) {
       result.push(item);
     }
   }
-  return result.sort();
+
+  for (let i = 0; i < result.length - 1; i++) {
+    for (let j = 0; j < result.length - 1; j++) {
+      if (result[j] > result[j + 1]) {
+        let temp = result[j];
+        result[j] = result[j + 1];
+        result[j + 1] = temp;
+      }
+    }
+  }
+  return result;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
