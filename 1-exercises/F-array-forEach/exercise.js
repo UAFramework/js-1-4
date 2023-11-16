@@ -9,6 +9,33 @@
 
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+function changeArrFizzBuzz(num) {
+  
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "FizzBuzz";
+  }
+
+  if (num % 3 === 0) {
+    return "Fizz";
+  } 
+  
+  if (num % 5 === 0) {
+    return "Buzz";
+  }
+
+  return num;
+}
+
+
+// option # 1 :
+// use map on the original array then use forach to console log each element of the aaray
+arr.map(changeArrFizzBuzz)
+    .forEach((el) => console.log(el));
+
+// option # 2:
+// you can just call forEach on the existing array without creating new array.
+// arr.forEach( num => console.log(changeArrFizzBuzz(num)) );
+
 /* EXPECTED OUTPUT */
 
 /*
