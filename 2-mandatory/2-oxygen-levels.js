@@ -11,7 +11,13 @@
     Some string methods that might help you here are .replace() and .substring().
 */
 
-function findSafeOxygenLevel() {}
+function findSafeOxygenLevel(oxygenLevels) {
+      return oxygenLevels.find((element) =>
+        element.substring(0, element.length - 1)>19.5 &&
+        +element.substring(0, element.length - 1)<23.5
+    );
+  }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

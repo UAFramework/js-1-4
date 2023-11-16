@@ -12,6 +12,8 @@ let pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
 
+const process = require('node:process');
+
 if(pairsByIndex.some((element) => element === null)) {
   process.exit(1);
 };
